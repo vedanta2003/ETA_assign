@@ -1,16 +1,15 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
 from tensorflow.keras.models import load_model
 from geopy.distance import geodesic
 import joblib
 
 # Load your trained model
-model = load_model('ETA/enhanced_dl_model2.h5')  # Replace with the path to your model
+model = load_model('enhanced_dl_model2.h5')  # Replace with the path to your model
 
 # Load the scaler
-scaler = joblib.load('ETA/scaler.pkl')
+scaler = joblib.load('scaler.pkl')
 
 # Streamlit app title
 st.title("ETA Prediction for Mumbai Routes")
